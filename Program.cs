@@ -27,3 +27,25 @@ namespace TPmod4
         }
     }
 }
+
+
+using System;
+
+namespace TPmod4
+{
+    class Program
+    {
+        static void Main()
+        {
+            DoorMachine door = new DoorMachine(); // Pintu dalam keadaan terkunci
+
+            Console.WriteLine("\nSimulasi perubahan state pintu:");
+            door.BukaPintu(); // Membuka pintu
+            door.KunciPintu(); // Mengunci pintu kembali
+            door.BukaPintu(); // Membuka pintu lagi
+            door.BukaPintu(); // Mencoba membuka pintu yang sudah terbuka
+            door.KunciPintu(); // Mengunci pintu lagi
+            door.KunciPintu(); // Mencoba mengunci pintu yang sudah terkunci
+        }
+    }
+}
